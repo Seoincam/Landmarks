@@ -7,9 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView: View {   
     var body: some View {
-        LandmarkList()
+        TabView {
+            Tab("Featured", systemImage: "star") {
+                CategoryHome()
+            }
+            
+            Tab("List", systemImage: "list.bullet") {
+                LandmarkList()
+            }
+        }
     }
 }
 
